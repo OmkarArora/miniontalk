@@ -8,16 +8,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header class="header">banana talk</header>
+<body onload="init()">
+    <header class="header">
+        <img src="images/minion-long.png" alt="groot character" class="header-img" />
+        <p class="header-content">minion talk</p>
+    </header>
 
     <main class="main">
         <textarea placeholder="Enter english statement here, and we will convert it to banana"
             id="text-input"></textarea>
         <button id="btn-translate">Translate To Banana</button>
-        <div>Translation 👇</div>
-        <div id="output"></div>
+        <div class="loader">
+        </div>
+        <span class="translated-section">
+            <div>Translation 👇</div>
+            <div id="output"></div>
+            <img src="https://media.giphy.com/media/m6OomwWCojfS8/giphy.gif" alt="minion dancing"
+                class="img-minion-dance" />
+        </span>
     </main>
+
 
     <footer class="footer">
         <div class="footer-heading">about</div>

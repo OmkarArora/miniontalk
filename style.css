@@ -22,6 +22,16 @@ body {
   padding: 1rem;
 }
 
+.header .header-img {
+  width: 50%;
+  height: auto;
+}
+
+.header .header-content {
+  margin-top: -20px;
+  margin-bottom: 0px;
+}
+
 .main {
   padding: 1rem;
   max-width: 600px;
@@ -49,6 +59,10 @@ body {
   font-size: large;
 }
 
+#btn-translate:focus {
+  outline: none;
+}
+
 #output {
   width: 100%;
   border: 1px solid black;
@@ -73,4 +87,59 @@ body {
 
 .footer .footer-text {
   margin-top: 8px;
+}
+
+.img-minion-dance {
+  width: 50%;
+  height: auto;
+}
+
+.translated-section {
+  display: none;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid var(--primary-color);
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin: auto;
+  display: none;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 700px) {
+  .footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .header .header-img {
+    width: 30%;
+    height: auto;
+  }
 }

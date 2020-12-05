@@ -31,7 +31,12 @@ translatedSection.style.display = "none";
       translatedSection.style.display = "unset";
       outputDiv.innerText = json.contents.translated;
     })
-    .catch((error) => console.log("error occurred", error));
+    .catch((error) => {
+      translatedSection.innerHTML = "<p>Server error <br/> Please try after some time</p>"
+      translatedSection.style.fontFamily = "Arial, sans-serif";
+      translatedSection.style.color = "red";
+      // console.log("error occurred", error)
+    });
 }
 
 btnTranslate.addEventListener("click", clickEventHandler);
